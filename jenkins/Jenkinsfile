@@ -1,5 +1,5 @@
 node {
-    docker.image('python:3.11.0a7-alpine3.15').inside('-u root:root') {
+    docker.image('python:3.11-alpine').inside('-u root:root') {
         stage('Build') {
             sh 'python3 -m py_compile sources/add2vals.py sources/calc.py'
         }
